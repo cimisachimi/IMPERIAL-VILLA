@@ -1,24 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #1c1a16;
-  --ivory: #f6f2e8;
-  --ivory-dim: #efe8d8;
-  --emerald: #14322b;
-  --emerald-deep: #0d211c;
-  --sage: #dbe3d1;
-  --brass: #b3873f;
-  --brass-light: #d9b573;
-  --line: rgba(28, 26, 22, 0.14);
+  /* Text & Base Lines (Dari warna genteng gelap) */
+  --ink: #2C2E33;
+  --line: rgba(44, 46, 51, 0.12);
+
+  /* Cream Stone Backgrounds (Dari pilar & pagar batu alam) */
+  --cream-stone: #E6E1D6;
+  --cream-dim: #DCD6C7;
+
+  /* Grey Accents (Dari cat dinding utama bangunan) */
+  --grey-dark: #8A9298;
+  --grey-deep: #666C71;
+  --grey-light: #C2C7CB;
+
+  /* Warm Wood Accents (Dari kusen pintu dan jendela kayu) */
+  --stone-accent: #9B6335;
+  --stone-light: #C48E5D;
 }
 
 @theme inline {
   --color-ink: var(--ink);
-  --color-ivory: var(--ivory);
-  --color-emerald: var(--emerald);
-  --color-emerald-deep: var(--emerald-deep);
-  --color-sage: var(--sage);
-  --color-brass: var(--brass);
+  --color-cream: var(--cream-stone);
+  --color-cream-dim: var(--cream-dim);
+  --color-grey-dark: var(--grey-dark);
+  --color-grey-deep: var(--grey-deep);
+  --color-grey-light: var(--grey-light);
+  --color-stone: var(--stone-accent);
+
   --font-display: var(--font-fraunces);
   --font-body: var(--font-manrope);
 }
@@ -32,12 +41,15 @@ html {
 }
 
 body {
-  background: var(--ivory);
+  background: var(--cream-stone);
   color: var(--ink);
   font-family: var(--font-body), "Segoe UI", sans-serif;
 }
 
-h1, h2, h3, .font-display {
+h1,
+h2,
+h3,
+.font-display {
   font-family: var(--font-display), Georgia, serif;
 }
 
@@ -55,7 +67,7 @@ h1, h2, h3, .font-display {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid var(--brass-light);
+  border: 1px solid var(--stone-light);
   clip-path: path("M0,400 L0,140 C0,62 62,0 140,0 C218,0 280,62 280,140 L280,400 Z");
   pointer-events: none;
 }
@@ -71,6 +83,7 @@ h1, h2, h3, .font-display {
     opacity: 0;
     transform: translateY(14px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -78,6 +91,6 @@ h1, h2, h3, .font-display {
 }
 
 :focus-visible {
-  outline: 2px solid var(--brass);
+  outline: 2px solid var(--stone-accent);
   outline-offset: 3px;
 }

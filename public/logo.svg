@@ -1,0 +1,22 @@
+<svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon Logo -->
+  <g transform="translate(10, 16)">
+    <!-- Atap Limasan -->
+    <path d="M24 8L42 20H6L24 8Z" fill="#786C5E" stroke="#786C5E" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- Bodi Bangunan -->
+    <path d="M11 20V38H37V20" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Ornamen Pintu Lengkung -->
+    <path d="M20 38V27C20 24.7909 21.7909 23 24 23C26.2091 23 28 24.7909 28 27V38" stroke="#786C5E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Teks Brand -->
+  <!-- Imperial -->
+  <text x="72" y="42" font-family="Serif, Georgia, 'Times New Roman'" font-size="28" font-weight="bold" fill="#2B2B2B" letter-spacing="-0.5">
+    Imperial
+  </text>
+  
+  <!-- Villa Syariah -->
+  <text x="73" y="58" font-family="sans-serif, Arial" font-size="11" font-weight="700" fill="#786C5E" letter-spacing="3.5">
+    VILLA SYARIAH
+  </text>
+</svg>
