@@ -24,6 +24,9 @@ export function Navbar() {
           <a href="#fasilitas" className="hover:text-stone transition-colors">
             Fasilitas
           </a>
+          <a href="#galeri" className="hover:text-stone transition-colors">
+            Galeri
+          </a>
           <a href="#ulasan" className="hover:text-stone transition-colors">
             Ulasan
           </a>

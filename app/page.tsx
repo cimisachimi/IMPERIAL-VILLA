@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { FacilitiesSection } from "@/components/FacilitiesSection";
 import { ReviewsSection } from "@/components/ReviewSection";
 import { ReservationSection } from "@/components/ReservationSection";
+import { GallerySection } from "@/components/GallerySection"
 import { Footer } from "@/components/Footer";
 import { LocationMapSection } from "@/components/LocationMapSection"
 
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutSection />
       <FacilitiesSection />
       <LocationMapSection /> {/* Posisi terbaik sebelum ulasan */}
+      <GallerySection />
       <ReviewsSection />
       <ReservationSection />
       <Footer />

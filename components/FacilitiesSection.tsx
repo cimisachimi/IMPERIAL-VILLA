@@ -3,76 +3,110 @@ import Image from "next/image";
 const facilities = [
   {
     title: "Ruang Utama Keluarga",
-    description: "Area santai yang lapang untuk kumpul bersama seluruh anggota keluarga.",
-    image: "/mainRoom.webp",
+    points: [
+      "Sofa santai & lapang",
+      "1 TV di ruang utama",
+      "Full AC & Wi-Fi 400 Mbps",
+    ],
+    image: "/mainRoom.JPG",
     alt: "Ruang Utama Villa",
   },
   {
     title: "3 Kamar Tidur Privat",
-    description: "Kamar tidur nyaman dengan suasana tenang untuk istirahat maksimal.",
+    points: [
+      "3 Kamar tidur + Kamar mandi",
+      "2 TV di dalam kamar",
+      "Full AC di setiap kamar",
+    ],
     image: "/room1.webp",
     alt: "Kamar Tidur Villa",
   },
   {
     title: "Dapur & Area Makan",
-    description: "Lengkap dengan peralatan memasak modern dan meja makan keluarga.",
+    points: [
+      "Kitchen set lengkap & alat masak",
+      "Meja makan keluarga",
+      "Kulkas & peralatan makan",
+    ],
     image: "/kitchen.webp",
     alt: "Dapur & Ruang Makan Villa",
   },
   {
     title: "Kamar Mandi Modern",
-    description: "Fasilitas kamar mandi bersih dan terawat dengan perlengkapan saniter lengkap.",
+    points: [
+      "Kamar mandi bersih & terawat",
+      "Perlengkapan saniter lengkap",
+      "Fasilitas air hangat",
+    ],
     image: "/bathRoom.webp",
     alt: "Kamar Mandi Villa",
   },
   {
-    title: "Area Cuci & Laundry",
-    description: "Fasilitas mesin cuci dan tempat jemur untuk menginap jangka panjang.",
+    title: "Area Cuci & Internet",
+    points: [
+      "Wi-Fi super cepat 400 Mbps",
+      "Washroom & fasilitas cuci",
+      "Ruangan ber-AC",
+    ],
     image: "/washingRoom.webp",
     alt: "Area Laundry Villa",
   },
   {
     title: "Akses & Garasi Privat",
-    description: "Parkir tertutup dan aman untuk menjaga privasi kendaraan Anda.",
-    image: "/entrance.webp",
+    points: [
+      "Parkir luas (muat 2 mobil)",
+      "Pagar tertutup & aman",
+      "Akses privat keluarga",
+    ],
+    image: "/entrance.JPG",
     alt: "Garasi & Akses Villa",
   },
 ];
 
 export function FacilitiesSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mb-8 sm:mb-10 text-center sm:text-left">
+    <section id="fasilitas" className="py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mb-10 sm:mb-14 text-center sm:text-left">
           <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-stone">
             Fasilitas
           </p>
-          <h2 className="mt-2 font-display text-2xl sm:text-4xl font-bold text-grey-dark">
+          <h2 className="mt-2 font-display text-3xl sm:text-5xl font-bold text-grey-dark">
             Fasilitas Utama Villa
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((item) => (
             <div
               key={item.title}
-              className="group overflow-hidden rounded-3xl bg-cream/50 transition-all duration-300 hover:bg-cream"
+              className="group flex flex-col overflow-hidden rounded-3xl bg-cream/60 transition-all duration-500 hover:-translate-y-1.5 hover:bg-cream hover:shadow-2xl"
             >
-              <div className="relative h-48 sm:h-52 w-full overflow-hidden">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-lg font-bold text-grey-dark">
-                  {item.title}
-                </h3>
-                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-ink/75">
-                  {item.description}
-                </p>
+
+              <div className="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                <div>
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-grey-dark">
+                    {item.title}
+                  </h3>
+
+                  <ul className="mt-5 space-y-3">
+                    {item.points.map((pt, i) => (
+                      <li key={i} className="flex items-center gap-3 text-sm sm:text-base font-medium text-grey-dark/90">
+                        <span className="flex h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

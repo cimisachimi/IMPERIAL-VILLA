@@ -141,8 +141,8 @@ export function LocationMapSection() {
                   onClick={() => handleRegionClick(region.id)}
                   style={{ top: region.top, left: region.left }}
                   className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full px-2.5 py-1 sm:px-3.5 sm:py-1.5 text-[11px] sm:text-xs lg:text-sm font-bold transition-all duration-300 shadow-md whitespace-nowrap ${isHovered
-                      ? "bg-stone text-cream scale-110 z-20 ring-4 ring-stone/30"
-                      : "bg-white/95 text-grey-dark hover:bg-stone hover:text-cream z-10"
+                    ? "bg-stone text-cream scale-110 z-20 ring-4 ring-stone/30"
+                    : "bg-white/95 text-grey-dark hover:bg-stone hover:text-cream z-10"
                     }`}
                 >
                   <span className="sm:hidden">{region.name}</span>
